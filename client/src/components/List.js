@@ -10,7 +10,7 @@ class List extends Component {
         }
     }
     async componentDidMount(){
-        await Axios.get('http://localhost:4000/api/view').then(async res=>{
+        await Axios.get('https://catalogue-server.herokuapp.com/api/view').then(async res=>{
             const data = []
             for(let i = 0;i < res.data.data.length; i++){
                 data.push(res.data.data[i])
