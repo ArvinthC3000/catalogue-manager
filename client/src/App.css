@@ -4,6 +4,21 @@
   text-align: center;
 }
 
+.wrapper{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.buttonWrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonWrapper > Button{
+  margin:.5rem auto;
+}
+
 .form{
   display: flex;
   flex-direction: column;
@@ -15,9 +30,28 @@
 
 .form > button{
   margin: 0 auto;
+  padding: 0 !important;
+  border: 0 !important;
 }
 .formDiv > button{
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+}
+
+.listContainer{
+  display: flex;
+  width: 100%;
+  margin: 1em auto;
+  /* background-color: aquamarine; */
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+}
+
+.listComponent{
+  margin: 1em;
+  border-radius: 2em;
+  background-color: aquamarine;
+  text-align: center;
+  width: 30%;
 }
