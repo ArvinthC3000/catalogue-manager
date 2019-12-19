@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react'
 import './App.css';
+import Form from './components/Form'
+import { Button } from 'react-bootstrap'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      createProduct: false,
+      viewProduct: false
+    }
+  }
+
+  handleClick = async (e) => {
+    const { name } = e.target
+    await this.setState(prevState => ({
+      createProduct : false,
+      viewProduct : false,
+      [name]: true
+    }))
+    console.log(this.state)
+  }
+
+  render(){
+    return (
+      <div>
+        <Button name='createProduct' onClick={this.handleClick} >Create Product</Button>
+        <Button name='viewProduct' onClick={this.handleClick}>View Products</Button>
+        {this.state.createProduct && <Form />}
+        {this.state.viewProduct}
+        
+      </div>
+    );
+  }
 }
 
 export default App;
