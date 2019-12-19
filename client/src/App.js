@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css';
 import Form from './components/Form'
+import List from './components/List'
 import { Button } from 'react-bootstrap'
 
 class App extends Component {
@@ -17,18 +18,20 @@ class App extends Component {
     await this.setState(prevState => ({
       createProduct : false,
       viewProduct : false,
+      button: false,
       [name]: true
     }))
-    console.log(this.state)
   }
 
   render(){
     return (
-      <div>
-        <Button name='createProduct' onClick={this.handleClick} >Create Product</Button>
-        <Button name='viewProduct' onClick={this.handleClick}>View Products</Button>
-        {this.state.createProduct && <Form />}
-        {this.state.viewProduct}
+      <div className='wrapper'>
+        <div className='buttonWrapper'>
+          <Button name='createProduct' onClick={this.handleClick} >Create Product</Button>
+          <Button name='viewProduct' onClick={this.handleClick}>View Products</Button>
+        </div>
+        {this.state.createProduct && <Form buttonPage = {this.state.button}/>}
+        {this.state.viewProduct && <List />}
         
       </div>
     );
