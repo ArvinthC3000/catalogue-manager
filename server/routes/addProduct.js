@@ -12,14 +12,14 @@ const Product = require('../model/Product')
 // @access  Public
 
 router.post('/', (req, res)=>{
-    const {product, brand, category, parentCategory='NA', specification='NA' } = req.body
+    const {productName, brand, category, parentCategory='NA', specification='NA' } = req.body
     
     const newProduct = new Product({
-        product,
+        productName,
         brand,
         category,
         parentCategory,
-        specification
+        specification: [specification]
     })
     newProduct.save()
     .then(data =>console.log('Successfully included'))
