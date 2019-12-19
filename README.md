@@ -1,6 +1,6 @@
-### Deployment URL : https://byjus-search-course.herokuapp.com/
+### Deployment URL : https://catalog-manage.herokuapp.com/
 
-# Byju's Search course
+# Aerchain'c Catalogue Management
 
 In this application, user can add products to database and can view the same along with other products in list.
 ### Version - 1.0
@@ -12,12 +12,13 @@ Desktop responsive.
 # Design
 ## Desktop
 [Desktop Layout]
-Updated soon*
+NA
 
 ## How to use?
 ### Use application only
-Just follow this [link](https://byjus-search-course.herokuapp.com/).    
+Just follow this [link](https://catalog-manage.herokuapp.com/).    
 It'll take you to deployed domine in which you can examine how it works.
+### Note: In case, if its not working(React Errors), try running locally.
 
 ### Run in you system
 
