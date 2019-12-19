@@ -8,11 +8,16 @@ const router = express.Router();
 // @desc    Adding new product 
 // @access  Public
 
-router.get('/', (req, res)=>{
-    res.send('Test router')
-})
-
 router.use('/add', require('./addProduct'))
+
+// Getting list handler
+
+// @type    GET
+// @route   api/view
+// @desc    Viewing existing product 
+// @access  Public
+
+router.use('/view', require('./viewProduct'))
 
 
 module.exports = router; 
