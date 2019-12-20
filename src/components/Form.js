@@ -21,7 +21,7 @@ class Form extends Component {
 
     handleSubmit = async (e) =>{
         e.preventDefault()
-        await Axios.post('http://catalogue-server.herokuapp.com/api/add',this.state)
+        await Axios.post('https://catalogue-server.herokuapp.com/api/add',this.state)
         .then(this.setState({
                 productName: '',
                 category:'',
